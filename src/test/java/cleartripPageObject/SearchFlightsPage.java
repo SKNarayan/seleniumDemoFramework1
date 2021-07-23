@@ -30,11 +30,11 @@ public class SearchFlightsPage extends CleartripBaseClass {
     @CacheLookup
     WebElement arrivalTo_cityname;
 
-    @FindBy(xpath = "//div[@class='row pt-3 pb-6 p-relative px-4']//button[1]")
+    @FindBy(xpath = "//h4[normalize-space()='Depart on']//div[@class='row pt-3 pb-6 p-relative px-4']//button[1]")
     @CacheLookup
     WebElement departOn;
 
-    @FindBy(xpath = "//button[@class='flex flex-middle flex-between t-all fs-2 focus:bc-secondary-500 bg-transparent bc-secondary-500 c-pointer pr-2 pl-3 pt-2 pb-2 ba br-4 h-8 c-neutral-900']//div[@class='fs-2 c-inherit flex flex-nowrap'][normalize-space()='Tue, Jul 20']")
+    @FindBy(xpath = "//div[@aria-label='Fri Jul 23 2021']//div[@class='p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip'][normalize-space()='23']")
     @CacheLookup
     WebElement departOnDate;
 
@@ -42,7 +42,7 @@ public class SearchFlightsPage extends CleartripBaseClass {
     @CacheLookup
     WebElement returnOn;
 
-    @FindBy(xpath = "//div[normalize-space()='Thu, Jul 22']")
+    @FindBy(xpath = "//div[@aria-label='Mon Jul 26 2021']//div[@class='p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip'][normalize-space()='26']")
     @CacheLookup
     WebElement returnOnDate;
 

@@ -17,9 +17,9 @@ public class TC_SearchFlights_001 extends CleartripBaseClass {
         searchFlightsPage.enterDepartureCityName("Mumbai");
         searchFlightsPage.enterArrivalCityName("Delhi");
 
-        //searchFlightsPage.scrollToPixel(400);
+        searchFlightsPage.scrollToPixel(400);
         //searchFlightsPage.scrollToElement();
-        searchFlightsPage.scrollPageTillBottom();
+        //searchFlightsPage.scrollPageTillBottom();
         Thread.sleep(2000);
 
         searchFlightsPage.clickOndepartureOn();
