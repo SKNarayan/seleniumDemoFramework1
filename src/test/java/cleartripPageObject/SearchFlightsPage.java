@@ -22,19 +22,23 @@ public class SearchFlightsPage extends CleartripBaseClass {
     @CacheLookup
     WebElement roundTrip;
 
-    @FindBy(xpath = "//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
+    @FindBy(xpath = "//h4[contains(text(),'From')]/parent::*/descendant::div[3]/input[@placeholder='Any worldwide city or airport']")
     @CacheLookup
     WebElement departureFrom_cityname;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[5]/div[1]/div[1]/div[1]/input[1]")
+    @FindBy(xpath = "//h4[contains(text(),'To')]/parent::*/descendant::div[3]/input[@placeholder='Any worldwide city or airport']")
     @CacheLookup
     WebElement arrivalTo_cityname;
 
-    @FindBy(xpath = "//h4[normalize-space()='Depart on']//div[@class='row pt-3 pb-6 p-relative px-4']//button[1]")
+    @FindBy(xpath = "//h4[contains(text(),'Depart on')]/ancestor::*/following::div[5]/button")
     @CacheLookup
     WebElement departOn;
 
-    @FindBy(xpath = "//div[@aria-label='Fri Jul 23 2021']//div[@class='p-1 day-gridContent flex flex-middle flex-column flex-center Round-trip'][normalize-space()='23']")
+   /* String todayDate_string = driver.findElement(By.xpath("//div[@class='DayPicker-Body']/child::div[5]/div[@aria-selected='true']/child::div[1]/child::div")).getText();
+    int todayDate_value = Integer.parseInt(todayDate_string);
+    int departOnDate_value = todayDate_value + 2;
+    String departOnDate_string = Integer.toString(departOnDate_value);*/
+    @FindBy(xpath = "//div[@class='DayPicker-Body']/child::div[5]/div[@aria-selected='true']/child::div[1]/child::div")
     @CacheLookup
     WebElement departOnDate;
 
