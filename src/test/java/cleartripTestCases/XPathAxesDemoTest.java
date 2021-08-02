@@ -48,7 +48,7 @@ public class XPathAxesDemoTest {
         System.out.println("Number of following nodes which has tr tag : " + allFollowingNodes.size());
 
         //Following-sibling : selects all siblings after the current node
-        
+
 
 
 
